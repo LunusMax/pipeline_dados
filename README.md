@@ -40,4 +40,3 @@ Este projeto é educativo e visa o aprendizado de boas práticas em engenharia d
 - Ambientes reprodutíveis
 - Processamento de dados de diferentes fontes
 - Documentação clara e compartilhável
-
