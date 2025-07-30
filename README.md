@@ -5,14 +5,13 @@ O projeto é conduzido em ambiente Linux (Ubuntu via WSL) e utiliza Python e Jup
 
 📁 Estrutura do Projeto
 pipeline_dados/
-├── data_raw/              # Dados brutos originais
-│   ├── dados_empresaA.json
-│   └── dados_empresaB.csv
-├── data_processed/ 
-├── notebooks/             # Análises e transformações (Jupyter)
-├── scripts/               # Scripts Python reutilizáveis
-├── .venv/                 # Ambiente virtual Python
-└── README.md              # Este arquivo
+├── data_raw/ # Dados brutos originais
+│ ├── dados_empresaA.json
+│ └── dados_empresaB.csv
+├── notebooks/ # Análises e transformações (Jupyter)
+├── scripts/ # Scripts Python reutilizáveis
+├── .venv/ # Ambiente virtual Python
+└── README.md # Este arquivo
 
 1. Configuração do Ambiente (via WSL - Ubuntu)
 Abra o terminal WSL e execute os passos abaixo:
