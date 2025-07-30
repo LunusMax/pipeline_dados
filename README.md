@@ -1,23 +1,42 @@
-Você está trabalhando em um projeto em que duas clínicas médicas, 
-a Clínica Sanare e a Clínica Reviver, estão passando por um processo de fusão.
+🏥 Fusão de Dados Clínicos — Sanare + Reviver
+Este projeto faz parte do curso "Pipeline de Dados" da Alura. O objetivo é estruturar um ambiente seguro, reprodutível e eficiente para unificar os dados de duas clínicas médicas em processo de fusão: Clínica Sanare e Clínica Reviver.
 
-Você está inserido no time de Engenharia de Dados como responsável por disponibilizar 
-as informações de ambas as clínicas de uma maneira segura, reprodutível e ágil. 
-No entanto, esses dados estão contidos em dois arquivos de origens diferentes e podem ser potencialmente incompatíveis. 
-Como solução, você optou por utilizar o WSL para acessar uma máquina Linux virtual onde deverá criar uma estrutura de pastas para o projeto. 
-O projeto inclui a criação de um ambiente virtual Python, a realização do download dos dados e o salvamento das etapas de trabalho em um script 
-que pode ser compartilhado com toda a equipe.
+O projeto é conduzido em ambiente Linux (Ubuntu via WSL) e utiliza Python e Jupyter Notebook como ferramentas principais de análise.
 
-1 - Configurar o ambiente e baixar os dados
-WSL Ubuntu instalado
-Download dos arquivos data_raw:
-dados_empresaA.json
-dados_empresaB.csv
+📁 Estrutura do Projeto
+pipeline_dados/
+├── data_raw/              # Dados brutos originais
+│   ├── dados_empresaA.json
+│   └── dados_empresaB.csv
+├── data_processed/ 
+├── notebooks/             # Análises e transformações (Jupyter)
+├── scripts/               # Scripts Python reutilizáveis
+├── .venv/                 # Ambiente virtual Python
+└── README.md              # Este arquivo
 
-2 - Criar ambiente virtual
+1. Configuração do Ambiente (via WSL - Ubuntu)
+Abra o terminal WSL e execute os passos abaixo:
+Criação da estrutura inicial:
+mkdir -p ~/pipeline_dados/{data_raw,notebooks,scripts}
+cd ~/pipeline_dados
+Download dos arquivos de dados:
+cd data_raw
+wget https://cdn3.gnarususercontent.com.br/3062-pipeline-dados/dados/dados_empresaA.json
+wget https://cdn3.gnarususercontent.com.br/3062-pipeline-dados/dados/dados_empresaB.csv
+
+2. Criar o Ambiente Virtual Python
+cd ~/projetos/pipeline-clinicas
 python3 -m venv .venv
 source .venv/bin/activate
 
-3 - Baixar Jupyter (com versionamento)
+3. Instalar Jupyter Notebook (com versionamento)
 pip install notebook==7.0.3
+jupyter notebook
+
+🤝 Contribuindo
+Este projeto é educativo e visa o aprendizado de boas práticas em engenharia de dados, como:
+- Organização de pastas
+- Ambientes reprodutíveis
+- Processamento de dados de diferentes fontes
+- Documentação clara e compartilhável
 
